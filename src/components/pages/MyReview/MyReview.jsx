@@ -14,7 +14,7 @@ const navigate = useNavigate() ;
 
 // get my reviews 
 const {data:allReview = [] , isLoading , refetch} = useQuery({
-  queryFn: () => fetch(` http://localhost:3065/my-reviews?email=${user.email}` , {
+  queryFn: () => fetch(` https://server-side-lemon.vercel.app/my-reviews?email=${user.email}` , {
     headers : {
       authorization : `Bearer ${localStorage.getItem('lotus-pc-token')}` ,
       }
@@ -61,7 +61,7 @@ reverseButtons: true
 }).then((result) => {
 if (result.isConfirmed) {
 //delete review data from here 
-fetch(` http://localhost:3065/my-reviews-delete/${deleteId}` , {
+fetch(` https://server-side-lemon.vercel.app/my-reviews-delete/${deleteId}` , {
 method:"DELETE" , 
 }).then(res => res.json())
 .then(data => {

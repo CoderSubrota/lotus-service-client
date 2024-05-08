@@ -22,7 +22,7 @@ const handleFormSubmit = (event) => {
 event.preventDefault() ;
 
 // https://lotus-pc-service-subrota22.vercel.app
-fetch(`http://localhost:3065/my-reviews-edit/${_id}` , {
+fetch(`https://server-side-lemon.vercel.app/my-reviews-edit/${_id}` , {
 method:"PUT" ,
 headers:{
 'content-type' : 'application/json' 

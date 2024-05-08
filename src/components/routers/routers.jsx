@@ -16,7 +16,7 @@ export const routers = createBrowserRouter([
 { paht:"/" , element: <MainLayout></MainLayout> , children:[
 {
 path:"/" , 
-loader: async () => fetch(`http://localhost:3065/service-data-limit`)  ,
+loader: async () => fetch(`https://server-side-lemon.vercel.app/service-data-limit`)  ,
  element:<Home></Home>
 } ,
 {
@@ -41,18 +41,18 @@ path:"/add-service" , element:<PrivateRouter><AddServices></AddServices></Privat
 ,
 {
 path:"/services" , 
-loader : async () => fetch(` http://localhost:3065/services`) ,
+loader : async () => fetch(` https://server-side-lemon.vercel.app/services`) ,
 element:<Services></Services>
 }
 ,
 {
 path:"/services-details/:id" ,
-loader : async ({params}) => fetch(` http://localhost:3065/services/${params.id}`) ,
+loader : async ({params}) => fetch(` https://server-side-lemon.vercel.app/services/${params.id}`) ,
 element:<ServiceDetails></ServiceDetails>
 } ,
 {
 path:"/review-edit/:id" ,
-loader: async ({params}) => fetch(` http://localhost:3065/my-reviews/${params.id}`) ,
+loader: async ({params}) => fetch(` https://server-side-lemon.vercel.app/my-reviews/${params.id}`) ,
 element:<MyReviewUpdate></MyReviewUpdate>
 }
 , {

@@ -9,7 +9,7 @@ const UserReviews = ({reviewId  , serviceName }) => {
 const [reviews , setReviews]  = useState([]) ;
 const [pageLoad , setPageLoad]  = useState(true) ;
 useEffect(() => {
-fetch(` http://localhost:3065/reviews/${reviewId}`)
+fetch(` https://server-side-lemon.vercel.app/reviews/${reviewId}`)
 .then(res => res.json())
 .then(data =>{
 setReviews(data) ;

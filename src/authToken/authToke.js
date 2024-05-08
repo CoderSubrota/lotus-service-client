@@ -3,7 +3,7 @@ export const authToken = (email) => {
 const currentUser = {
 email:email , 
 }
-fetch(`http://localhost:3065/authentication` , {
+fetch(`https://server-side-lemon.vercel.app/authentication` , {
 method:"POST" , 
 headers:{
  'content-type' : 'application/json'

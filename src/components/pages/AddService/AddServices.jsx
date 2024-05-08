@@ -13,7 +13,7 @@ setService(newService) ;
 }
 const handleFormSubmit = (event) => {
 event.preventDefault() ;
-fetch(`http://localhost:3065/services` , {
+fetch(`https://server-side-lemon.vercel.app/services` , {
 method:"POST" ,
 headers:{
 'content-type' : 'application/json' 

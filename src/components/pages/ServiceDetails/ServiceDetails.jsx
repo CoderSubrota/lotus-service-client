@@ -43,7 +43,7 @@ setReview(newReview) ;
 //post review data
 const handleReviewForm = (event) => {
 event.preventDefault() ;
-fetch(` http://localhost:3065/reviews` , {
+fetch(` https://server-side-lemon.vercel.app/reviews` , {
 method:"POST" ,
 headers:{
 'content-type' : 'application/json'
